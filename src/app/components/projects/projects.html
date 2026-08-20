@@ -1,0 +1,83 @@
+<section
+  id="proyectos"
+  class="bg-base-100 px-4 py-16 md:px-8 md:py-20 lg:px-16 lg:py-24"
+  aria-labelledby="projects-title"
+>
+  <div class="mx-auto max-w-7xl">
+
+    <!-- Header -->
+    <div class="max-w-3xl">
+      <span class="text-sm font-semibold uppercase tracking-widest text-primary">
+        Proyectos
+      </span>
+
+      <h1
+        id="projects-title"
+        class="mt-3 text-3xl font-bold tracking-tight text-base-content md:text-4xl lg:text-5xl"
+      >
+        Proyectos que he desarrollado
+      </h1>
+
+      <p class="mt-4 text-base leading-7 text-base-content/65 md:text-lg">
+        Una selección de proyectos enfocados en desarrollo frontend,
+        arquitectura de componentes, experiencia de usuario y accesibilidad.
+      </p> 
+    </div>
+
+    <!-- Projects -->
+   <div class="grid gap-6 md:grid-cols-2 xl:grid-cols-3 mt-3">
+
+      @for (project of projects; track project.id) {
+
+        <a [routerLink]="['/project', project.id]">
+        <article
+          class="card border border-base-300 bg-base-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+          <figure class="h-52 overflow-hidden">
+            <img
+              [src]="project.image"
+              [alt]="project.title"
+              class="h-full w-full object-cover transition duration-500 hover:scale-105"
+            />
+          </figure>
+
+          <div class="card-body">
+
+            <div class="flex items-start justify-between gap-3">
+
+              <div>
+                <h2 class="card-title text-xl">
+                  {{ project.title }}
+                </h2>
+
+                <p class="mt-1 text-sm text-base-content/60">
+                  {{ project.company }}
+                </p>
+              </div>
+            </div>
+               <span class="badge badge-primary badge-outline">
+                {{ project.category }}
+              </span>
+
+            <div class="mt-4 flex flex-wrap gap-2">
+
+              @for (technology of project.technologies; track technology) {
+
+                <span class="badge badge-ghost">
+                  {{ technology }}
+                </span>
+
+              }
+
+            </div>
+
+          </div>
+
+        </article>
+        </a>
+      }
+
+    </div>
+
+  </div>
+</section>

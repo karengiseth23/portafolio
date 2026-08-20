@@ -1,0 +1,228 @@
+<section
+  id="sobre-mi"
+  class="bg-base-100 px-4 py-16 md:px-8 md:py-20 lg:px-16 lg:py-24"
+  aria-labelledby="about-title"
+>
+  <div class="mx-auto max-w-7xl">
+
+    <!-- Section heading -->
+    <div class="max-w-3xl">
+      <h1 class="text-sm font-semibold uppercase tracking-widest text-primary">
+        Sobre mí
+      </h1>
+
+      <h2
+        id="about-title"
+        class="mt-3 text-3xl font-bold tracking-tight text-base-content md:text-4xl lg:text-5xl"
+      >
+        Desarrollo interfaces que conectan tecnología, diseño y personas.
+      </h2>
+    </div>
+
+    <!-- Main content -->
+    <div class="mt-12 grid gap-10 lg:grid-cols-12 lg:gap-16">
+
+      <!-- Text -->
+      <div class="lg:col-span-7">
+
+        <div class="space-y-5 text-base leading-7 text-base-content/70 md:text-lg">
+
+          <p>
+            Soy <strong class="font-semibold text-base-content">Karen Giseth</strong>,
+            Ingeniera de Sistemas, Frontend Developer y UI Designer,
+            con experiencia en el desarrollo de soluciones digitales y
+            componentes web reutilizables.
+          </p>
+
+          <p>
+            Mi trabajo se encuentra en la intersección entre
+            <strong class="font-semibold text-base-content">
+              desarrollo frontend, diseño de interfaces y accesibilidad web
+            </strong>.
+            Me interesa transformar requerimientos complejos en experiencias
+            digitales claras, consistentes y fáciles de utilizar.
+          </p>
+
+          <p>
+            He participado en proyectos para entidades públicas y privadas,
+            desarrollando interfaces con Angular y tecnologías web,
+            implementando sistemas de componentes y acompañando procesos
+            de mejora de accesibilidad y usabilidad.
+          </p>
+
+          <p>
+            También he liderado procesos de evaluación y acompañamiento en
+            accesibilidad digital, trabajando con estándares como
+            <strong class="font-semibold text-base-content">
+              WCAG 2.1, WCAG 2.2 y WAI-ARIA
+            </strong>.
+          </p>
+
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-8 flex flex-wrap gap-3">
+
+          <a
+            routerLink="/projects"
+            class="btn btn-primary"
+          >
+            Ver mis proyectos
+          </a>
+
+          <button class="btn btn-secondary"  (click)="mostrarModalContacto = true" >Hablemos</button>
+        </div>
+
+      </div>
+
+      <!-- Highlights -->
+      <div class="lg:col-span-5">
+
+        <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
+
+          <!-- Highlight -->
+          <article class="card border border-base-300 bg-base-200 shadow-sm">
+            <div class="card-body">
+              <div class="flex items-start gap-4">
+
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary"
+                  aria-hidden="true"
+                >
+                  <span class="text-lg font-bold">01</span>
+                </div>
+
+                <div>
+                  <h3 class="card-title text-lg">
+                    Frontend
+                  </h3>
+
+                  <p class="mt-1 text-sm leading-6 text-base-content/65">
+                    Desarrollo de interfaces modernas, componentes
+                    reutilizables y soluciones escalables.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- Highlight -->
+          <article class="card border border-base-300 bg-base-200 shadow-sm">
+            <div class="card-body">
+              <div class="flex items-start gap-4">
+
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-secondary/10 text-secondary"
+                  aria-hidden="true"
+                >
+                  <span class="text-lg font-bold">02</span>
+                </div>
+
+                <div>
+                  <h3 class="card-title text-lg">
+                    UI / UX
+                  </h3>
+
+                  <p class="mt-1 text-sm leading-6 text-base-content/65">
+                    Diseño de interfaces centradas en claridad,
+                    consistencia y experiencia de usuario.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+          <!-- Highlight -->
+          <article class="card border border-base-300 bg-base-200 shadow-sm">
+            <div class="card-body">
+              <div class="flex items-start gap-4">
+
+                <div
+                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent"
+                  aria-hidden="true"
+                >
+                  <span class="text-lg font-bold">03</span>
+                </div>
+
+                <div>
+                  <h3 class="card-title text-lg">
+                    Accesibilidad
+                  </h3>
+
+                  <p class="mt-1 text-sm leading-6 text-base-content/65">
+                    Integración de criterios WCAG y buenas prácticas
+                    de accesibilidad desde el desarrollo.
+                  </p>
+                </div>
+
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- Metrics -->
+    <div class="mt-16 border-t border-base-300 pt-10">
+
+      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+
+        <div>
+          <p class="text-4xl font-bold text-primary">
+            +300
+          </p>
+
+          <p class="mt-2 text-sm text-base-content/60">
+            Entidades evaluadas
+          </p>
+        </div>
+
+        <div>
+          <p class="text-4xl font-bold text-secondary">
+            +20
+          </p>
+
+          <p class="mt-2 text-sm text-base-content/60">
+            Componentes desarrollados
+          </p>
+        </div>
+
+        <div>
+          <p class="text-4xl font-bold text-accent">
+            97%
+          </p>
+
+          <p class="mt-2 text-sm text-base-content/60">
+            Cumplimiento WCAG AA
+          </p>
+        </div>
+
+        <div>
+          <p class="text-4xl font-bold text-base-content">
+            10+
+          </p>
+
+          <p class="mt-2 text-sm text-base-content/60">
+            Años de experiencia profesional
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<app-skills></app-skills>
+
+
+<app-modal-contacto
+  [mostrar]="mostrarModalContacto"
+  (cerrar)="mostrarModalContacto = false">
+</app-modal-contacto>

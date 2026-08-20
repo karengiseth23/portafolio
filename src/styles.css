@@ -1,3 +1,100 @@
-/* You can add global styles to this file, and also import other style files */
-
 @import 'tailwindcss';
+
+@plugin 'daisyui' {
+  themes: karen --default, karen-dark ;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'karen';
+
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #ffffff;
+  --color-base-200: #f8fafc;
+  --color-base-300: #e2e8f0;
+  --color-base-content: #0f172a;
+
+  --color-primary: #2563eb;
+  --color-primary-content: #ffffff;
+
+  --color-secondary: #7c3aed;
+  --color-secondary-content: #ffffff;
+
+  --color-accent: #06b6d4;
+  --color-accent-content: #ffffff;
+
+  --color-neutral: #0f172a;
+  --color-neutral-content: #ffffff;
+
+  --color-info: #0284c7;
+  --color-info-content: #ffffff;
+
+  --color-success: #16a34a;
+  --color-success-content: #ffffff;
+
+  --color-warning: #d97706;
+  --color-warning-content: #ffffff;
+
+  --color-error: #dc2626;
+  --color-error-content: #ffffff;
+
+  --radius-selector: 0.75rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@plugin 'daisyui/theme' {
+  name: 'karen-dark';
+ 
+  prefersdark: true;
+  color-scheme: dark;
+
+  --color-base-100: #0f172a;
+  --color-base-200: #1e293b;
+  --color-base-300: #334155;
+  --color-base-content: #f8fafc;
+
+  --color-primary: #60a5fa;
+  --color-primary-content: #0f172a;
+
+  --color-secondary: #a78bfa;
+  --color-secondary-content: #1e1b4b;
+
+  --color-accent: #22d3ee;
+  --color-accent-content: #083344;
+
+  --color-neutral: #e2e8f0;
+  --color-neutral-content: #0f172a;
+
+  --color-info: #38bdf8;
+  --color-info-content: #082f49;
+
+  --color-success: #4ade80;
+  --color-success-content: #052e16;
+
+  --color-warning: #fbbf24;
+  --color-warning-content: #451a03;
+
+  --color-error: #f87171;
+  --color-error-content: #450a0a;
+
+  --radius-selector: 0.75rem;
+  --radius-field: 0.75rem;
+  --radius-box: 1rem;
+
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
