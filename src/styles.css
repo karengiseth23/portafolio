@@ -98,3 +98,11 @@
   --depth: 0;
   --noise: 0;
 }
+
+/* Accesibily for keyboard */
+button:focus-visible,
+a:focus-visible, input:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+  box-shadow: 0 0 0 5px var(--color-base-100);
+}

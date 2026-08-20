@@ -15,6 +15,8 @@ export const PROJECTS: Project[]=[
     'Diseño y desarrollo de un framework frontend para la integración de trámites digitales de ADRES con GOV.CO, orientado a construir experiencias consistentes, responsivas y accesibles.',
 
   image: 'img/furpen.png',
+  
+  alt: 'Interfaz del framework frontend desarrollado para la integración de trámites de ADRES con GOV.CO',
 
   category: 'Frontend',
 
@@ -57,6 +59,8 @@ export const PROJECTS: Project[]=[
 
   image: 'img/bonita.png',
 
+  alt: 'Interfaz de solución digital para BBVA desarrollada con BonitaSoft',
+
   category: 'Frontend',
 
   role:
@@ -97,6 +101,8 @@ export const PROJECTS: Project[]=[
 
   image: 'img/piki.jpg',
 
+  alt: 'Interfaz de PIKI para consultar y gestionar la historia clínica de mascotas',
+
   category: 'Frontend',
 
   role:
@@ -136,6 +142,8 @@ export const PROJECTS: Project[]=[
 
   image: 'img/odasi.png',
 
+  alt: 'Interfaz web responsive desarrollada para soluciones digitales de Odasi',
+
   category: 'Frontend',
 
   role:
@@ -165,6 +173,8 @@ export const PROJECTS: Project[]=[
     'Diseño y desarrollo frontend de una plataforma para digitalizar el proceso de inspección de naves marítimas realizado por la Armada de Colombia.',
 
   image: 'img/genav.png',
+
+  alt: 'Interfaz del sistema digital para inspección de naves marítimas',
 
   category: 'Frontend',
 
@@ -204,6 +214,8 @@ export const PROJECTS: Project[]=[
     'Diseño y desarrollo de componentes web reutilizables para estandarizar la construcción de interfaces digitales dentro del ecosistema GOV.CO.',
 
   image: 'img/cdngovco.png',
+
+  alt: 'Componentes de interfaz del sistema de diseño web del ecosistema GOV.CO',
 
   category: 'Design System',
 
@@ -245,6 +257,8 @@ export const PROJECTS: Project[]=[
     'Estrategia de mejora de accesibilidad para la Sede Electrónica de la Superintendencia de Industria y Comercio, enfocada en la remediación técnica, auditoría y acompañamiento a equipos de desarrollo.',
 
   image: 'img/superintendencia.png',
+
+  alt: 'Interfaz de la Sede Electrónica de la Superintendencia de Industria y Comercio evaluada para accesibilidad digital',
 
   category: 'Accesibilidad',
 
@@ -288,6 +302,8 @@ export const PROJECTS: Project[]=[
 
   image: 'img/guiaaccesibilidad.png',
 
+  alt: 'Material visual del Kit Guía Nacional de Accesibilidad Web para equipos de diseño y desarrollo',
+
   category: 'Accesibilidad',
 
   role:
@@ -329,6 +345,8 @@ export const PROJECTS: Project[]=[
     'Auditoría y acompañamiento para mejorar la accesibilidad de Landing Pages de Bancolombia en Panamá y Puerto Rico.',
 
   image: 'img/bancolombia.png',
+
+  alt: 'Interfaz de Landing Page de Bancolombia evaluada mediante una auditoría de accesibilidad',
 
   category: 'Accesibilidad',
 

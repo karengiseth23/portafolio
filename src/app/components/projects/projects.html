@@ -29,14 +29,14 @@
 
       @for (project of projects; track project.id) {
 
-        <a [routerLink]="['/project', project.id]">
+        <a [routerLink]="['/project', project.id]"  class="rounded-xl">
         <article
           class="card border border-base-300 bg-base-100 transition duration-300 hover:-translate-y-1 hover:shadow-xl">
 
           <figure class="h-52 overflow-hidden">
             <img
               [src]="project.image"
-              [alt]="project.title"
+              [alt]="project.alt"
               class="h-full w-full object-cover transition duration-500 hover:scale-105"
             />
           </figure>
