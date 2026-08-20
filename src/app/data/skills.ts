@@ -1,7 +1,11 @@
 import { Skill } from "../models/skill";
 
 export const SKILLS: Skill[] = [
-// Frontend
+
+  // =========================
+  // FRONTEND
+  // =========================
+
   {
     name: 'Angular',
     category: 'Frontend'
@@ -23,6 +27,14 @@ export const SKILLS: Skill[] = [
     category: 'Frontend'
   },
   {
+    name: 'Tailwind CSS',
+    category: 'Frontend'
+  },
+  {
+    name: 'DaisyUI',
+    category: 'Frontend'
+  },
+  {
     name: 'Bootstrap',
     category: 'Frontend'
   },
@@ -35,21 +47,64 @@ export const SKILLS: Skill[] = [
     category: 'Frontend'
   },
 
-  // UI / UX
+  // =========================
+  // BACKEND / API
+  // =========================
+
+  {
+    name: 'Node.js',
+    category: 'Backend / API'
+  },
+  {
+    name: '.NET',
+    category: 'Backend / API'
+  },
+  {
+    name: 'Python',
+    category: 'Backend / API'
+  },
+  {
+    name: 'FastAPI',
+    category: 'Backend / API'
+  },
+  {
+    name: 'REST API',
+    category: 'Backend / API'
+  },
+  {
+    name: 'PostgreSQL',
+    category: 'Backend / API'
+  },
+  {
+    name: 'Oracle',
+    category: 'Backend / API'
+  },
+  {
+    name: 'Swagger',
+    category: 'Backend / API'
+  },
+
+  // =========================
+  // DISEÑO UI / UX
+  // =========================
+
   {
     name: 'Figma',
-    category: 'UI / UX'
+    category: 'Diseño UI/UX'
   },
   {
     name: 'Adobe XD',
-    category: 'UI / UX'
+    category: 'Diseño UI/UX'
   },
   {
     name: 'Balsamiq',
-    category: 'UI / UX'
+    category: 'Diseño UI/UX'
   },
 
-  // Accessibility
+  // =========================
+  // ACCESIBILIDAD
+  // =========================
+
   {
     name: 'WCAG 2.1',
     category: 'Accesibilidad'
@@ -74,10 +129,21 @@ export const SKILLS: Skill[] = [
     name: 'Lighthouse',
     category: 'Accesibilidad'
   },
+  {
+    name: 'Pa11y',
+    category: 'Accesibilidad'
+  },
 
-  // Tools
+  // =========================
+  // HERRAMIENTAS Y TECNOLOGÍAS
+  // =========================
+
   {
     name: 'Git',
+    category: 'Herramientas'
+  },
+  {
+    name: 'GitHub',
     category: 'Herramientas'
   },
   {
@@ -92,26 +158,20 @@ export const SKILLS: Skill[] = [
     name: 'Postman',
     category: 'Herramientas'
   },
-
-  //backend 
   {
-    name: 'Node.js',
-    category: 'Backend / API'
+    name: 'Visual Studio',
+    category: 'Herramientas'
   },
   {
-    name: 'Python',
-    category: 'Backend / API'
+    name: 'Visual Studio Code',
+    category: 'Herramientas'
   },
   {
-    name: 'FastAPI',
-    category: 'Backend / API'
+    name: 'npm',
+    category: 'Herramientas'
   },
   {
-    name: 'PostgreSQL',
-    category: 'Backend / API'
-  },
-  {
-    name: 'REST API',
-    category: 'Backend / API'
+    name: 'Git Bash',
+    category: 'Herramientas'
   }
 ];
