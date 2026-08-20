@@ -4,6 +4,16 @@
   [open]="mostrar">
 
   <div class="modal-box">
+       <div class="modal-action mt-0">
+
+      <button
+        type="button"
+        class="btn rounded-full  btn-soft btn-secondary"
+        (click)="cerrarModal()">
+        X
+      </button>
+
+    </div>
 
     <h1 class="text-lg font-bold">
       ¡Hablemos!
@@ -26,23 +36,11 @@
 
       <a
         href="mailto:karen2389@live.com"
-        class="btn btn-outline">
+        class="btn btn-outline btn-accent">
         Enviarme un correo
       </a>
 
     </div>
-
-    <div class="modal-action">
-
-      <button
-        type="button"
-        class="btn"
-        (click)="cerrarModal()">
-        Cerrar
-      </button>
-
-    </div>
-
   </div>
 
 </dialog>
