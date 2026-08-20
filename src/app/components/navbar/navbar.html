@@ -3,27 +3,27 @@
     <div class="navbar bg-base-100 shadow-sm px-4 py-6 md:px-24 md:py-10 lg:px-24 lg:py-6">
     <div class="navbar-start">
       <div class="dropdown">
-        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
-          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
+        <div tabindex="0" role="button" class="btn btn-lg btn-ghost lg:hidden">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
         </div>
         <ul
           tabindex="-1"
-          class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
-          <li><a
+          class="menu  dropdown-content bg-base-100 rounded-box z-1 mt-3 w-80 p-2 shadow">
+          <li><a class="p-4 btn btn-xl m-2 text-lg"
             routerLink="/aboutMe"
             routerLinkActive="text-primary font-bold"
           
             >Sobre mi</a></li>
-          <li><a
+          <li><a class="p-4 btn btn-xl m-2 text-lg"
             routerLink="/experience"
             routerLinkActive="text-primary font-bold"
             >Experiencia</a></li>
-          <li><a
+          <li><a class="p-4 btn btn-xl m-2 text-lg"
             routerLink="/projects"
             routerLinkActive="text-primary font-bold">Proyectos</a>
           </li>
           <li>
-            <a
+            <a class="p-4 btn btn-xl m-2 text-lg"
               href="Karen-Giseth-Urrego-Frontend-Developer.pdf"
               download
               aria-label="Descargar hoja de vida en formato PDF">
@@ -33,7 +33,7 @@
           </li>
           <li>
             <button
-            class="btn btn-soft btn-primary btn-sm mx-2"
+            class="btn btn-soft btn-xl btn-primary m-2 text-lg"
             (click)="mostrarModalContacto = true">
             Contáctame
             </button>
@@ -71,7 +71,7 @@
         </li>
         <li>
             <button
-            class="btn btn-md btn-soft btn-secondary mx-2"
+            class="btn btn-soft btn-secondary mx-2"
             (click)="mostrarModalContacto = true">
             Contáctame
             </button>
