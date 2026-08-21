@@ -9,21 +9,21 @@
         <ul
           tabindex="-1"
           class="menu  dropdown-content bg-base-100 rounded-box z-1 mt-3 w-70 p-2 shadow">
-          <li><a class="p-4 btn btn-lg m-2 text-lg"
+          <li><a class="p-4 btn btn-md m-2 text-lg"
             routerLink="/aboutMe"
             routerLinkActive="text-primary font-bold"
           
             >Sobre mi</a></li>
-          <li><a class="p-4 btn btn-lg m-2 text-lg"
+          <li><a class="p-4 btn btn-md m-2 text-lg"
             routerLink="/experience"
             routerLinkActive="text-primary font-bold"
             >Experiencia</a></li>
-          <li><a class="p-4 btn btn-lg m-2 text-lg"
+          <li><a class="p-4 btn btn-md m-2 text-lg"
             routerLink="/projects"
             routerLinkActive="text-primary font-bold">Proyectos</a>
           </li>
           <li>
-            <a class="p-4 btn btn-lg m-2 text-lg"
+            <a class="p-4 btn btn-md m-2 text-lg"
               href="Karen-Giseth-Urrego-Frontend-Developer.pdf"
               download
               aria-label="Descargar hoja de vida en formato PDF">
@@ -33,7 +33,7 @@
           </li>
           <li>
             <button
-            class="btn btn-soft btn-lg btn-primary m-2 text-lg"
+            class="btn btn-soft btn-md btn-primary m-2 text-lg"
             (click)="mostrarModalContacto = true">
             Contáctame
             </button>
@@ -132,5 +132,6 @@
   [mostrar]="mostrarModalContacto"
   (cerrar)="mostrarModalContacto = false">
 </app-modal-contacto>
- </header>
 
+ </header>
+  <app-translate></app-translate>

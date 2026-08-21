@@ -106,3 +106,14 @@ a:focus-visible, input:focus-visible {
   outline-offset: 3px;
   box-shadow: 0 0 0 5px var(--color-base-100);
 }
+
+/* Google Translate */
+.google-translate-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}

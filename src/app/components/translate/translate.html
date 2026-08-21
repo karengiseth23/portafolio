@@ -1,0 +1,35 @@
+<div class="flex justify-center md:justify-end md:pe-20 items-center gap-1 mt-5">
+
+  <button
+    type="button"
+    class="btn btn-ghost btn-sm"
+    (click)="changeLanguage('es')"
+    aria-label="Cambiar a español"
+  >
+    Español
+  </button>
+
+  <span
+    class="opacity-30"
+    aria-hidden="true"
+  >
+    |
+  </span>
+
+  <button
+    type="button"
+    class="btn btn-ghost btn-sm"
+    (click)="changeLanguage('en')"
+    aria-label="Cambiar a inglés"
+  >
+    Inglés
+  </button>
+
+</div>
+
+<!-- Google Translate se mantiene oculto -->
+<div
+  id="google_translate_element"
+  class="google-translate-hidden"
+  aria-hidden="true"
+></div>

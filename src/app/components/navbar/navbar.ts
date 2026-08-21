@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ModalContacto } from '../modal-contacto/modal-contacto';
+import { Translate } from "../translate/translate";
 
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, RouterLinkActive, ModalContacto],
+  imports: [RouterLink, RouterLinkActive, ModalContacto, Translate],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
