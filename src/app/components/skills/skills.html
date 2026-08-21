@@ -42,10 +42,17 @@
                  border border-base-300 bg-base-100
                  shadow-sm
                  transition-all duration-300
+
                  hover:-translate-y-1
                  hover:border-primary/40
-                 hover:shadow-lg"
+                 hover:shadow-lg
+
+                 active:-translate-y-1
+                 active:scale-[0.99]
+                 active:border-primary
+                 active:shadow-lg"
         >
+
           <!-- Card body -->
           <div class="card-body relative z-10 p-6 md:p-8">
 
@@ -58,16 +65,26 @@
                        rounded-xl
                        bg-primary/10
                        transition-all duration-300
+
                        group-hover:scale-110
-                       group-hover:bg-primary/10"
+                       group-hover:bg-primary/20
+
+                       group-active:scale-110
+                       group-active:bg-primary/20"
                 aria-hidden="true"
               >
+
                 <img
                   [src]="getCategoryIcon(category)"
                   alt=""
-                  class="h-7 w-7 object-contain"
+                  class="h-7 w-7 object-contain
+                         transition-transform duration-300
+
+                         group-hover:scale-110
+                         group-active:scale-110"
                   aria-hidden="true"
                 />
+
               </div>
 
 
@@ -77,16 +94,21 @@
                 <h3
                   class="text-xl font-bold text-base-content
                          transition-colors duration-300
-                         group-hover:text-secondary"
+
+                         group-hover:text-secondary
+                         group-active:text-secondary"
                 >
                   {{ category }}
                 </h3>
+
 
                 <!-- Línea animada -->
                 <div
                   class="mt-2 h-1 w-8 rounded-full bg-secondary
                          transition-all duration-300
-                         group-hover:w-16"
+
+                         group-hover:w-16
+                         group-active:w-16"
                   aria-hidden="true"
                 ></div>
 
@@ -114,10 +136,16 @@
                          text-sm font-medium
                          text-base-content
                          transition-all duration-200 ease-out
+
                          hover:-translate-y-1
                          hover:border-primary
                          hover:bg-primary/10
-                         hover:text-primary"
+                         hover:text-primary
+
+                         active:-translate-y-1
+                         active:border-primary
+                         active:bg-primary/10
+                         active:text-primary"
                 >
                   {{ skill.name }}
                 </span>
@@ -144,25 +172,37 @@
                border border-primary/20
                bg-primary/5
                transition-all duration-300
+
                hover:border-primary/50
-               hover:shadow-lg"
+               hover:shadow-lg
+               hover:-translate-y-1
+
+               active:border-primary
+               active:shadow-lg
+               active:-translate-y-1"
       >
 
         <!-- Decoración -->
         <div
           class="pointer-events-none absolute -right-6 -top-6
-                 opacity-5
+                 opacity-10
                  transition-all duration-500
+
                  group-hover:scale-110
-                 group-hover:opacity-10"
+                 group-hover:opacity-30
+
+                 group-active:scale-110
+                 group-active:opacity-30"
           aria-hidden="true"
         >
+
           <img
             src="/img/accessibility.png"
             alt=""
             class="h-32 w-32 object-contain"
             aria-hidden="true"
           />
+
         </div>
 
 
@@ -178,7 +218,9 @@
                    text-primary-content
                    shadow-md
                    transition-transform duration-300
-                   group-hover:scale-110"
+
+                   group-hover:scale-110
+                   group-active:scale-110"
             aria-hidden="true"
           >
 
@@ -204,7 +246,13 @@
 
             <div class="flex flex-wrap items-center gap-3">
 
-              <h3 class="text-lg font-bold text-base-content">
+              <h3
+                class="text-lg font-bold text-base-content
+                       transition-colors duration-300
+
+                       group-hover:text-primary
+                       group-active:text-primary"
+              >
                 Desarrollo con accesibilidad desde el inicio
               </h3>
 
@@ -219,7 +267,9 @@
             <div
               class="mt-3 h-1 w-10 rounded-full bg-primary
                      transition-all duration-300
-                     group-hover:w-20"
+
+                     group-hover:w-20
+                     group-active:w-20"
               aria-hidden="true"
             ></div>
 
