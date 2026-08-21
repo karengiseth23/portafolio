@@ -58,7 +58,7 @@
           </p>
 
         </div>
-
+  
         <!-- CTA -->
         <div class="mt-8 flex flex-wrap gap-3">
 
@@ -71,149 +71,403 @@
 
           <button class="btn btn-soft btn-secondary"  (click)="mostrarModalContacto = true" >Hablemos</button>
         </div>
-
+          <app-timeline></app-timeline>
       </div>
-
+   
       <!-- Highlights -->
       <div class="lg:col-span-5">
 
         <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-1">
         
-          <!-- Highlight -->
-          <article class="card border border-base-300 bg-base-200 shadow-sm">
-            <div class="card-body">
+          <!-- Frontend -->
+          <article
+            class="group card border border-base-300 bg-base-200 shadow-sm
+                  transition-all duration-300 ease-out
+                  hover:-translate-y-2 hover:border-primary hover:shadow-xl">
+
+            <div class="card-body p-6">
+
               <div class="flex items-start gap-4">
 
+                <!-- Número -->
                 <div
-                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary"
-                  aria-hidden="true"
-                >
-                  <span class="text-lg font-bold">01</span>
+                  class="flex h-12 w-12 shrink-0 items-center justify-center
+                        rounded-xl bg-primary/10 text-primary
+                        transition-all duration-300
+                        group-hover:scale-110 group-hover:bg-primary group-hover:text-primary-content"
+                  aria-hidden="true">
+
+                  <span class="text-lg font-bold">
+                    01
+                  </span>
+
                 </div>
 
-                <div>
-                  <h3 class="card-title text-lg">
-                    Frontend
-                  </h3>
+                <div class="flex-1">
 
-                  <p class="mt-1 text-sm leading-6 text-base-content/65">
+                  <div class="flex items-center justify-between gap-3">
+
+                    <h3
+                      class="card-title text-lg transition-colors duration-300
+                            group-hover:text-primary">
+                      Frontend
+                    </h3>
+
+                    <span
+                      class="text-primary opacity-0 -translate-x-2
+                            transition-all duration-300
+                            group-hover:translate-x-0 group-hover:opacity-100"
+                      aria-hidden="true">
+                      →
+                    </span>
+
+                  </div>
+
+                  <p class="mt-2 text-sm leading-6 text-base-content/65">
                     Desarrollo de interfaces modernas, componentes
                     reutilizables y soluciones escalables.
                   </p>
+
+                  <!-- Tecnologías -->
+                  <div
+                    class="mt-4 flex flex-wrap gap-2
+                          opacity-0 max-h-0 overflow-hidden
+                          transition-all duration-300
+                          group-hover:opacity-100 group-hover:max-h-20">
+
+                    <span class="badge badge-primary badge-outline badge-sm">
+                      Angular
+                    </span>
+
+                    <span class="badge badge-primary badge-outline badge-sm">
+                      TypeScript
+                    </span>
+
+                    <span class="badge badge-primary badge-outline badge-sm">
+                      Components
+                    </span>
+
+                  </div>
+
                 </div>
 
               </div>
+
             </div>
           </article>
 
-          <!-- Highlight -->
-          <article class="card border border-base-300 bg-base-200 shadow-sm">
-            <div class="card-body">
-              <div class="flex items-start gap-4">
 
-                <div
-                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-secondary/10 text-secondary"
-                  aria-hidden="true"
-                >
-                  <span class="text-lg font-bold">02</span>
-                </div>
+<!-- UI / UX -->
+<article
+  class="group card border border-base-300 bg-base-200 shadow-sm
+         transition-all duration-300 ease-out
+         hover:-translate-y-2 hover:border-secondary hover:shadow-xl">
 
-                <div>
-                  <h3 class="card-title text-lg">
-                    UI / UX
-                  </h3>
+  <div class="card-body p-6">
 
-                  <p class="mt-1 text-sm leading-6 text-base-content/65">
-                    Diseño de interfaces centradas en claridad,
-                    consistencia y experiencia de usuario.
-                  </p>
-                </div>
+    <div class="flex items-start gap-4">
 
-              </div>
-            </div>
-          </article>
+      <!-- Número -->
+      <div
+        class="flex h-12 w-12 shrink-0 items-center justify-center
+               rounded-xl bg-secondary/10 text-secondary
+               transition-all duration-300
+               group-hover:scale-110 group-hover:bg-secondary group-hover:text-secondary-content"
+        aria-hidden="true">
 
-          <!-- Highlight -->
-          <article class="card border border-base-300 bg-base-200 shadow-sm">
-            <div class="card-body">
-              <div class="flex items-start gap-4">
+        <span class="text-lg font-bold">
+          02
+        </span>
 
-                <div
-                  class="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent"
-                  aria-hidden="true"
-                >
-                  <span class="text-lg font-bold">03</span>
-                </div>
+      </div>
 
-                <div>
-                  <h3 class="card-title text-lg">
-                    Accesibilidad
-                  </h3>
+      <div class="flex-1">
 
-                  <p class="mt-1 text-sm leading-6 text-base-content/65">
-                    Integración de criterios WCAG, W3C y buenas prácticas
-                    de accesibilidad desde el desarrollo.
-                  </p>
-                </div>
+        <div class="flex items-center justify-between gap-3">
 
-              </div>
-            </div>
-          </article>
+          <h3
+            class="card-title text-lg transition-colors duration-300
+                   group-hover:text-secondary">
+            UI / UX
+          </h3>
+
+          <span
+            class="text-secondary opacity-0 -translate-x-2
+                   transition-all duration-300
+                   group-hover:translate-x-0 group-hover:opacity-100"
+            aria-hidden="true">
+            →
+          </span>
+
+        </div>
+
+        <p class="mt-2 text-sm leading-6 text-base-content/65">
+          Diseño de interfaces centradas en claridad,
+          consistencia y experiencia de usuario.
+        </p>
+
+        <!-- Tecnologías -->
+        <div
+          class="mt-4 flex flex-wrap gap-2
+                 opacity-0 max-h-0 overflow-hidden
+                 transition-all duration-300
+                 group-hover:opacity-100 group-hover:max-h-20">
+
+          <span class="badge badge-secondary badge-outline badge-sm">
+            UI Design
+          </span>
+
+          <span class="badge badge-secondary badge-outline badge-sm">
+            UX
+          </span>
+
+          <span class="badge badge-secondary badge-outline badge-sm">
+            Design Systems
+          </span>
 
         </div>
 
       </div>
 
     </div>
+
+  </div>
+</article>
+
+
+<!-- Accesibilidad -->
+  <article
+    class="group card border border-base-300 bg-base-200 shadow-sm
+          transition-all duration-300 ease-out
+          hover:-translate-y-2 hover:border-accent hover:shadow-xl">
+    <div class="card-body p-6">
+
+      <div class="flex items-start gap-4">
+
+        <!-- Número -->
+        <div
+          class="flex h-12 w-12 shrink-0 items-center justify-center
+                rounded-xl bg-accent/10 text-accent
+                transition-all duration-300
+                group-hover:scale-110 group-hover:bg-accent group-hover:text-accent-content"
+          aria-hidden="true">
+
+          <span class="text-lg font-bold">
+            03
+          </span>
+
+        </div>
+
+        <div class="flex-1">
+
+          <div class="flex items-center justify-between gap-3">
+
+            <h3
+              class="card-title text-lg transition-colors duration-300
+                    group-hover:text-accent">
+              Accesibilidad
+            </h3>
+
+            <span
+              class="text-accent opacity-0 -translate-x-2
+                    transition-all duration-300
+                    group-hover:translate-x-0 group-hover:opacity-100"
+              aria-hidden="true">
+              →
+            </span>
+
+          </div>
+
+          <p class="mt-2 text-sm leading-6 text-base-content/65">
+            Integración de criterios WCAG, W3C y buenas prácticas
+            de accesibilidad desde el desarrollo.
+          </p>
+
+          <!-- Tecnologías -->
+          <div
+            class="mt-4 flex flex-wrap gap-2
+                  opacity-0 max-h-0 overflow-hidden
+                  transition-all duration-300
+                  group-hover:opacity-100 group-hover:max-h-20">
+
+            <span class="badge badge-accent badge-outline badge-sm">
+              WCAG
+            </span>
+
+            <span class="badge badge-accent badge-outline badge-sm">
+              WAI-ARIA
+            </span>
+
+            <span class="badge badge-accent badge-outline badge-sm">
+              W3C
+            </span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+  </article>
+
+        </div>
+
+      </div>
+
+</div>
 
     <!-- Metrics -->
-    <div class="mt-16 border-t border-base-300 pt-10">
+<div class="mt-16  border-t border-base-300 pt-10">
+    <h3 id="about-title" class="mt-3 mb-3 text-2xl font-bold tracking-tight text-base-content md:text-3xl lg:text-4xl">
+    Logros
+  </h3>
+  <div class="grid mt-5 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+    
+    <!-- Métrica 01 -->
+    <article
+      class="group relative overflow-hidden rounded-2xl border border-base-300
+             bg-base-200 p-6 transition-all duration-300 ease-out
+             hover:-translate-y-2 hover:border-primary hover:shadow-xl">
 
-      <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+      <!-- Número decorativo -->
+      <span
+        class="absolute -right-3 -top-6 text-8xl font-bold text-primary/5
+               transition-transform duration-500 group-hover:scale-110"
+        aria-hidden="true">
+        01
+      </span>
 
-        <div>
-          <p class="text-4xl font-bold text-primary">
-            +300
-          </p>
+      <div class="relative">
 
-          <p class="mt-2 text-sm text-base-content/60">
-            Entidades evaluadas
-          </p>
-        </div>
+        <p
+          class="text-5xl font-bold text-primary transition-transform duration-300
+                 group-hover:scale-105">
+          +300
+        </p>
 
-        <div>
-          <p class="text-4xl font-bold text-secondary">
-            +80
-          </p>
+        <div class="mt-3 h-1 w-10 rounded-full bg-primary transition-all duration-300 group-hover:w-16"></div>
 
-          <p class="mt-2 text-sm text-base-content/60">
-            Componentes desarrollados
-          </p>
-        </div>
-
-        <div>
-          <p class="text-4xl font-bold text-accent">
-            97%
-          </p>
-
-          <p class="mt-2 text-sm text-base-content/60">
-            Cumplimiento WCAG AA
-          </p>
-        </div>
-
-        <div>
-          <p class="text-4xl font-bold text-base-content">
-            10+
-          </p>
-
-          <p class="mt-2 text-sm text-base-content/60">
-            Años de experiencia profesional
-          </p>
-        </div>
+        <p class="mt-4 text-sm leading-6 text-base-content/65">
+          Validación y acompañamiento de accesibilidad en más de
+          <strong class="text-base-content">300 entidades</strong>
+          del sector público en Colombia.
+        </p>
 
       </div>
 
-    </div>
+    </article>
+
+
+    <!-- Métrica 02 -->
+    <article
+      class="group relative overflow-hidden rounded-2xl border border-base-300
+             bg-base-200 p-6 transition-all duration-300 ease-out
+             hover:-translate-y-2 hover:border-secondary hover:shadow-xl">
+
+      <span
+        class="absolute -right-3 -top-6 text-8xl font-bold text-secondary/5
+               transition-transform duration-500 group-hover:scale-110"
+        aria-hidden="true">
+        02
+      </span>
+
+      <div class="relative">
+
+        <p
+          class="text-5xl font-bold text-secondary transition-transform duration-300
+                 group-hover:scale-105">
+          4
+        </p>
+
+        <div class="mt-3 h-1 w-10 rounded-full bg-secondary transition-all duration-300 group-hover:w-16"></div>
+
+        <p class="mt-4 text-sm leading-6 text-base-content/65">
+          Integración de
+          <strong class="text-base-content">4 trámites digitales</strong>
+          de ADRES con GOV.CO.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- Métrica 03 -->
+    <article
+      class="group relative overflow-hidden rounded-2xl border border-base-300
+             bg-base-200 p-6 transition-all duration-300 ease-out
+             hover:-translate-y-2 hover:border-accent hover:shadow-xl">
+
+      <span
+        class="absolute -right-3 -top-6 text-8xl font-bold text-accent/5
+               transition-transform duration-500 group-hover:scale-110"
+        aria-hidden="true">
+        03
+      </span>
+
+      <div class="relative">
+
+        <p
+          class="text-5xl font-bold text-accent transition-transform duration-300
+                 group-hover:scale-105">
+          97%
+        </p>
+
+        <div class="mt-3 h-1 w-10 rounded-full bg-accent transition-all duration-300 group-hover:w-16"></div>
+
+        <p class="mt-4 text-sm leading-6 text-base-content/65">
+          Cumplimiento de
+          <strong class="text-base-content">WCAG 2.2 AA</strong>
+          alcanzado en la Sede Electrónica de la SIC.
+        </p>
+
+      </div>
+
+    </article>
+
+
+    <!-- Métrica 04 -->
+    <article
+      class="group relative overflow-hidden rounded-2xl border border-base-300
+             bg-base-200 p-6 transition-all duration-300 ease-out
+             hover:-translate-y-2 hover:border-base-content hover:shadow-xl">
+
+      <span
+        class="absolute -right-3 -top-6 text-8xl font-bold text-base-content/5
+               transition-transform duration-500 group-hover:scale-110"
+        aria-hidden="true">
+        04
+      </span>
+
+      <div class="relative">
+
+        <p
+          class="text-5xl font-bold text-base-content transition-transform duration-300
+                 group-hover:scale-105">
+          6+
+        </p>
+
+        <div
+          class="mt-3 h-1 w-10 rounded-full bg-base-content
+                 transition-all duration-300 group-hover:w-16">
+        </div>
+
+        <p class="mt-4 text-sm leading-6 text-base-content/65">
+          Años de
+          <strong class="text-base-content">
+            experiencia profesional
+          </strong>
+          en desarrollo de soluciones digitales.
+        </p>
+
+      </div>
+
+    </article>
+
+  </div>
+
+</div>
 
   </div>
 </section>

@@ -18,4 +18,15 @@ export class Skills {
   getSkillsByCategory(category: string): Skill[] {
     return this.skills.filter(skill => skill.category === category);
   }
+  getCategoryIcon(category: string): string {
+  const icons: Record<string, string> = {
+    'Frontend': '/img/hojeada.png',
+    'Backend / API': '/img/programador.png',
+    'Diseño UI/UX': '/img/diseno-web.png',
+    'Accesibilidad': '/img/diseno-web.png',
+    'Herramientas': '/img/tools.png'
+  };
+
+  return icons[category] || '/img/tools.png'
+}
 }
