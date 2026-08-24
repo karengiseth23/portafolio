@@ -24,7 +24,7 @@ export class LoaderHome implements OnInit {
         this.visible = false;
         localStorage.setItem('loaderShown', 'true');
         this.cd.detectChanges();
-      }, 3000);
+      }, 1000);
     }
   }
 }
