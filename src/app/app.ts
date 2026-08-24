@@ -2,6 +2,7 @@ import { Component, signal } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { Navbar } from './components/navbar/navbar';
 import { Footer } from './components/footer/footer';
+import { LoaderHome } from './loader-home/loader-home';
 
 
 @Component({
@@ -10,6 +11,7 @@ import { Footer } from './components/footer/footer';
     RouterOutlet,
     Navbar,
     Footer,
+    LoaderHome
   ],
   templateUrl: './app.html',
   styleUrl: './app.css'

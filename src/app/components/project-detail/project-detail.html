@@ -6,15 +6,20 @@
     <!-- VOLVER -->
     <!-- ========================================= -->
 
-    <div class="mx-auto max-w-7xl px-6 pt-8 lg:px-8">
+    <div class="mx-auto max-w-7xl px-4 pt-6 sm:px-6 lg:px-8 lg:pt-8">
 
       <a
         routerLink="/projects"
-        class="btn btn-ghost btn-sm gap-2">
+        class="group btn btn-ghost btn-sm gap-2 text-base-content/60 transition-colors hover:text-primary"
+      >
+        <span
+          class="transition-transform duration-300 group-hover:-translate-x-1"
+          aria-hidden="true"
+        >
+          ←
+        </span>
 
-        <span>←</span>
         Volver a proyectos
-
       </a>
 
     </div>
@@ -24,47 +29,84 @@
     <!-- HERO -->
     <!-- ========================================= -->
 
-    <section class="mx-auto max-w-7xl px-6 py-12 lg:px-8 lg:py-20">
+    <section
+      class="mx-auto max-w-7xl px-4 py-12 sm:px-6 md:py-16 lg:px-8 lg:py-24"
+    >
 
-      <div class="grid items-center gap-12 lg:grid-cols-2">
+      <div class="grid items-center gap-10 lg:grid-cols-[1fr_1.05fr] lg:gap-16">
 
-        <!-- Información -->
-
+        <!-- INFORMACIÓN -->
         <div>
 
           <!-- Categoría -->
 
-          <span class="badge badge-primary badge-outline">
-            {{ project.category }}
-          </span>
+          <div class="flex flex-wrap items-center gap-3">
+
+            <span
+              class="badge badge-primary badge-outline px-4 py-3 font-medium"
+            >
+              {{ project.category }}
+            </span>
+
+            <span
+              class="h-1.5 w-1.5 rounded-full bg-primary/40"
+              aria-hidden="true"
+            ></span>
+
+            <span class="text-sm text-base-content/50">
+              Proyecto
+            </span>
+
+          </div>
 
 
           <!-- Título -->
 
           <h1
-            class="mt-5 max-w-3xl text-4xl font-bold leading-tight tracking-tight md:text-5xl lg:text-6xl">
-
+            class="
+              mt-6
+              max-w-3xl
+              text-4xl
+              font-black
+              leading-[1.05]
+              tracking-tight
+              text-base-content
+              sm:text-5xl
+              lg:text-6xl
+            "
+          >
             {{ project.title }}
-
           </h1>
 
 
           <!-- Empresa -->
 
-          <p class="mt-4 text-lg font-medium text-base-content/60">
-
+          <p
+            class="
+              mt-5
+              text-lg
+              font-medium
+              text-primary
+            "
+          >
             {{ project.company }}
-
           </p>
 
 
           <!-- Descripción -->
 
           <p
-            class="mt-8 max-w-2xl text-lg leading-relaxed text-base-content/70">
-
+            class="
+              mt-6
+              max-w-2xl
+              text-base
+              leading-7
+              text-base-content/65
+              sm:text-lg
+              sm:leading-8
+            "
+          >
             {{ project.description }}
-
           </p>
 
 
@@ -78,10 +120,22 @@
                 [href]="project.url"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="btn btn-primary">
+                class="
+                  btn
+                  btn-primary
+                  gap-2
+                  shadow-sm
+                  transition-all
+                  duration-300
+                  hover:-translate-y-0.5
+                  hover:shadow-lg
+                "
+              >
+                Ver proyecto
 
-                Ver proyecto ↗
-
+                <span aria-hidden="true">
+                  ↗
+                </span>
               </a>
 
             }
@@ -92,10 +146,22 @@
                 [href]="project.github"
                 target="_blank"
                 rel="noopener noreferrer"
-                class="btn btn-outline">
-
+                class="
+                  btn
+                  btn-outline
+                  gap-2
+                  transition-all
+                  duration-300
+                  hover:-translate-y-0.5
+                  hover:border-primary
+                  hover:text-primary
+                "
+              >
                 GitHub
 
+                <span aria-hidden="true">
+                  ↗
+                </span>
               </a>
 
             }
@@ -105,15 +171,57 @@
         </div>
 
 
-        <!-- Imagen -->
-
+        <!-- IMAGEN -->
         <figure
-          class="overflow-hidden rounded-2xl border border-base-300 bg-base-200 shadow-sm">
+          class="
+            group
+            relative
+            overflow-hidden
+            rounded-3xl
+            border
+            border-base-300
+            bg-base-200
+            shadow-lg
+            transition-all
+            duration-500
+            hover:-translate-y-1
+            hover:border-primary/40
+            hover:shadow-2xl
+          "
+        >
+
+          <!-- Glow -->
+
+          <div
+            class="
+              pointer-events-none
+              absolute
+              -inset-10
+              bg-primary/10
+              opacity-0
+              blur-3xl
+              transition-opacity
+              duration-500
+              group-hover:opacity-100
+            "
+            aria-hidden="true"
+          ></div>
+
 
           <img
             [src]="project.image"
             [alt]="project.title"
-            class="h-auto w-full object-cover" />
+            class="
+              relative
+              h-auto
+              w-full
+              object-cover
+              transition-transform
+              duration-700
+              ease-out
+              group-hover:scale-[1.03]
+            "
+          />
 
         </figure>
 
@@ -122,66 +230,177 @@
     </section>
 
 
-
     <!-- ========================================= -->
     <!-- INFORMACIÓN PRINCIPAL -->
     <!-- ========================================= -->
 
-    <section class="border-y border-base-300 bg-base-200">
+    <section
+      class="
+        border-y
+        border-base-300
+        bg-base-200/60
+      "
+    >
 
-      <div class="mx-auto max-w-7xl px-6 py-14 lg:px-8">
+      <div
+        class="
+          mx-auto
+          max-w-7xl
+          px-4
+          py-12
+          sm:px-6
+          lg:px-8
+          lg:py-16
+        "
+      >
 
-        <div class="grid gap-12 lg:grid-cols-2">
-
+        <div class="grid gap-6 lg:grid-cols-2">
 
           <!-- MI ROL -->
 
           @if (project.role) {
 
-            <div>
+            <article
+              class="
+                group
+                rounded-2xl
+                border
+                border-base-300
+                bg-base-100
+                p-6
+                shadow-sm
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:border-primary/40
+                hover:shadow-lg
+                md:p-8
+              "
+            >
+
+              <div
+                class="
+                  flex
+                  h-11
+                  w-11
+                  items-center
+                  justify-center
+                  rounded-xl
+                  bg-primary/10
+                  text-primary
+                  transition-all
+                  duration-300
+                  group-hover:bg-primary
+                  group-hover:text-primary-content
+                "
+                aria-hidden="true"
+              >
+                ✦
+              </div>
 
               <p
-                class="text-sm font-semibold uppercase tracking-widest text-primary">
-
+                class="
+                  mt-6
+                  text-xs
+                  font-bold
+                  uppercase
+                  tracking-widest
+                  text-primary
+                "
+              >
                 Mi rol
-
               </p>
 
-              <h2 class="mt-3 text-2xl font-bold">
-
+              <h2
+                class="
+                  mt-2
+                  text-2xl
+                  font-bold
+                  tracking-tight
+                "
+              >
                 ¿Qué hice en este proyecto?
-
               </h2>
 
               <p
-                class="mt-5 max-w-2xl text-lg leading-relaxed text-base-content/70">
-
+                class="
+                  mt-4
+                  text-base
+                  leading-7
+                  text-base-content/65
+                "
+              >
                 {{ project.role }}
-
               </p>
 
-            </div>
+            </article>
 
           }
 
 
           <!-- TECNOLOGÍAS -->
 
-          <div>
+          <article
+            class="
+              group
+              rounded-2xl
+              border
+              border-base-300
+              bg-base-100
+              p-6
+              shadow-sm
+              transition-all
+              duration-300
+              hover:-translate-y-1
+              hover:border-primary/40
+              hover:shadow-lg
+              md:p-8
+            "
+          >
+
+            <div
+              class="
+                flex
+                h-11
+                w-11
+                items-center
+                justify-center
+                rounded-xl
+                bg-primary/10
+                text-primary
+                transition-all
+                duration-300
+                group-hover:bg-primary
+                group-hover:text-primary-content
+              "
+              aria-hidden="true"
+            >
+              &lt;/&gt;
+            </div>
 
             <p
-              class="text-sm font-semibold uppercase tracking-widest text-primary">
-
+              class="
+                mt-6
+                text-xs
+                font-bold
+                uppercase
+                tracking-widest
+                text-primary
+              "
+            >
               Tecnologías
-
             </p>
 
-            <h2 class="mt-3 text-2xl font-bold">
-
+            <h2
+              class="
+                mt-2
+                text-2xl
+                font-bold
+                tracking-tight
+              "
+            >
               Herramientas utilizadas
-
             </h2>
-
 
             <div class="mt-5 flex flex-wrap gap-2">
 
@@ -190,17 +409,27 @@
                 track technology
               ) {
 
-                <span class="badge badge-lg badge-ghost">
-
+                <span
+                  class="
+                    badge
+                    badge-lg
+                    badge-ghost
+                    border-base-300
+                    transition-all
+                    duration-200
+                    hover:border-primary
+                    hover:bg-primary
+                    hover:text-primary-content
+                  "
+                >
                   {{ technology }}
-
                 </span>
 
               }
 
             </div>
 
-          </div>
+          </article>
 
         </div>
 
@@ -209,46 +438,78 @@
     </section>
 
 
-
     <!-- ========================================= -->
     <!-- EL RETO -->
     <!-- ========================================= -->
 
     @if (project.challenge) {
 
-      <section class="mx-auto max-w-4xl px-6 py-16 lg:px-8 lg:py-24">
+      <section
+        class="
+          mx-auto
+          max-w-7xl
+          px-4
+          py-16
+          sm:px-6
+          lg:px-8
+          lg:py-24
+        "
+      >
 
-        <div>
+        <div class="grid items-start gap-10 lg:grid-cols-[220px_1fr]">
 
-          <p
-            class="text-sm font-semibold uppercase tracking-widest text-primary">
+          <!-- Label -->
 
-            El reto
+          <div>
 
-          </p>
+            <p
+              class="
+                text-xs
+                font-bold
+                uppercase
+                tracking-widest
+                text-primary
+              "
+            >
+              01 · El reto
+            </p>
+
+          </div>
 
 
-          <h2
-            class="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+          <!-- Content -->
 
-            El problema que necesitábamos resolver
+          <div class="max-w-4xl">
 
-          </h2>
+            <h2
+              class="
+                text-3xl
+                font-bold
+                tracking-tight
+                md:text-4xl
+              "
+            >
+              El problema que necesitábamos resolver
+            </h2>
 
+            <p
+              class="
+                mt-6
+                text-lg
+                leading-8
+                text-base-content/65
+              "
+            >
+              {{ project.challenge }}
+            </p>
 
-          <p
-            class="mt-6 text-lg leading-relaxed text-base-content/70">
-
-            {{ project.challenge }}
-
-          </p>
+          </div>
 
         </div>
 
       </section>
 
     }
-
 
 
     <!-- ========================================= -->
@@ -257,32 +518,81 @@
 
     @if (project.solution) {
 
-      <section class="bg-base-200">
+      <section
+        class="
+          bg-base-200
+          px-4
+          sm:px-6
+          lg:px-8
+        "
+      >
 
-        <div class="mx-auto max-w-4xl px-6 py-16 lg:px-8 lg:py-24">
+        <div
+          class="
+            mx-auto
+            max-w-7xl
+            py-16
+            lg:py-24
+          "
+        >
 
-          <p
-            class="text-sm font-semibold uppercase tracking-widest text-primary">
+          <div
+            class="
+              grid
+              items-start
+              gap-10
+              lg:grid-cols-[220px_1fr]
+            "
+          >
 
-            La solución
+            <!-- Label -->
 
-          </p>
+            <div>
+
+              <p
+                class="
+                  text-xs
+                  font-bold
+                  uppercase
+                  tracking-widest
+                  text-primary
+                "
+              >
+                02 · La solución
+              </p>
+
+            </div>
 
 
-          <h2
-            class="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+            <!-- Content -->
 
-            Cómo abordé el proyecto
+            <div class="max-w-4xl">
 
-          </h2>
+              <h2
+                class="
+                  text-3xl
+                  font-bold
+                  tracking-tight
+                  md:text-4xl
+                "
+              >
+                Cómo abordé el proyecto
+              </h2>
 
+              <p
+                class="
+                  mt-6
+                  text-lg
+                  leading-8
+                  text-base-content/65
+                "
+              >
+                {{ project.solution }}
+              </p>
 
-          <p
-            class="mt-6 text-lg leading-relaxed text-base-content/70">
+            </div>
 
-            {{ project.solution }}
-
-          </p>
+          </div>
 
         </div>
 
@@ -291,30 +601,48 @@
     }
 
 
-
     <!-- ========================================= -->
     <!-- RESULTADOS -->
     <!-- ========================================= -->
 
     @if (project.results?.length) {
 
-      <section class="mx-auto max-w-7xl px-6 py-16 lg:px-8 lg:py-24">
+      <section
+        class="
+          mx-auto
+          max-w-7xl
+          px-4
+          py-16
+          sm:px-6
+          lg:px-8
+          lg:py-24
+        "
+      >
 
         <div class="max-w-3xl">
 
           <p
-            class="text-sm font-semibold uppercase tracking-widest text-primary">
-
-            Resultados
-
+            class="
+              text-xs
+              font-bold
+              uppercase
+              tracking-widest
+              text-primary
+            "
+          >
+            03 · Resultados
           </p>
 
-
           <h2
-            class="mt-3 text-3xl font-bold tracking-tight md:text-4xl">
-
+            class="
+              mt-3
+              text-3xl
+              font-bold
+              tracking-tight
+              md:text-4xl
+            "
+          >
             Impacto del proyecto
-
           </h2>
 
         </div>
@@ -322,7 +650,15 @@
 
         <!-- Resultados -->
 
-        <div class="mt-10 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
+        <div
+          class="
+            mt-10
+            grid
+            gap-5
+            md:grid-cols-2
+            lg:grid-cols-3
+          "
+        >
 
           @for (
             result of project.results;
@@ -330,25 +666,51 @@
           ) {
 
             <article
-              class="rounded-2xl border border-base-300 bg-base-100 p-6 transition duration-300 hover:-translate-y-1 hover:shadow-lg">
-
-              <!-- Icono -->
+              class="
+                group
+                rounded-2xl
+                border
+                border-base-300
+                bg-base-100
+                p-6
+                shadow-sm
+                transition-all
+                duration-300
+                hover:-translate-y-1
+                hover:border-primary/40
+                hover:shadow-lg
+              "
+            >
 
               <div
-                class="flex h-10 w-10 items-center justify-center rounded-full bg-primary/10 text-primary">
-
+                class="
+                  flex
+                  h-10
+                  w-10
+                  items-center
+                  justify-center
+                  rounded-xl
+                  bg-primary/10
+                  font-bold
+                  text-primary
+                  transition-all
+                  duration-300
+                  group-hover:bg-primary
+                  group-hover:text-primary-content
+                "
+                aria-hidden="true"
+              >
                 ✓
-
               </div>
 
-
-              <!-- Resultado -->
-
               <p
-                class="mt-5 leading-relaxed text-base-content/70">
-
+                class="
+                  mt-5
+                  leading-7
+                  text-base-content/65
+                "
+              >
                 {{ result }}
-
               </p>
 
             </article>
@@ -362,32 +724,84 @@
     }
 
 
-
     <!-- ========================================= -->
     <!-- CTA FINAL -->
     <!-- ========================================= -->
 
-    <section class="border-t border-base-300 bg-base-200">
+    <section
+      class="
+        border-t
+        border-base-300
+        bg-base-200
+      "
+    >
 
       <div
-        class="mx-auto max-w-4xl px-6 py-16 text-center lg:px-8 lg:py-20">
+        class="
+          mx-auto
+          max-w-4xl
+          px-4
+          py-16
+          text-center
+          sm:px-6
+          lg:px-8
+          lg:py-20
+        "
+      >
 
-        <h2 class="text-3xl font-bold md:text-4xl">
+        <div
+          class="
+            mx-auto
+            flex
+            h-12
+            w-12
+            items-center
+            justify-center
+            rounded-2xl
+            bg-primary/10
+            text-xl
+            text-primary
+          "
+          aria-hidden="true"
+        >
+          ✦
+        </div>
 
+        <h2
+          class="
+            mt-6
+            text-3xl
+            font-bold
+            tracking-tight
+            md:text-4xl
+          "
+        >
           ¿Quieres conocer más de mi trabajo?
-
         </h2>
 
-
         <p
-          class="mx-auto mt-4 max-w-xl text-base-content/60">
-
-          Explora otros proyectos o ponte en contacto conmigo para hablar sobre una nueva oportunidad.
-
+          class="
+            mx-auto
+            mt-4
+            max-w-xl
+            leading-7
+            text-base-content/60
+          "
+        >
+          Explora otros proyectos o ponte en contacto conmigo
+          para hablar sobre una nueva oportunidad.
         </p>
 
 
-        <div class="mt-8 flex flex-wrap justify-center gap-3">
+        <div
+          class="
+            mt-8
+            flex
+            flex-wrap
+            justify-center
+            gap-3
+          "
+        >
 
           @if (project.url) {
 
@@ -395,10 +809,21 @@
               [href]="project.url"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn btn-primary">
+              class="
+                btn
+                btn-primary
+                gap-2
+                transition-all
+                duration-300
+                hover:-translate-y-0.5
+                hover:shadow-lg
+              "
+            >
+              Ver proyecto
 
-              Ver proyecto ↗
-
+              <span aria-hidden="true">
+                ↗
+              </span>
             </a>
 
           }
@@ -410,10 +835,22 @@
               [href]="project.github"
               target="_blank"
               rel="noopener noreferrer"
-              class="btn btn-outline">
-
+              class="
+                btn
+                btn-outline
+                gap-2
+                transition-all
+                duration-300
+                hover:-translate-y-0.5
+                hover:border-primary
+                hover:text-primary
+              "
+            >
               Ver código
 
+              <span aria-hidden="true">
+                ↗
+              </span>
             </a>
 
           }
@@ -421,10 +858,23 @@
 
           <a
             routerLink="/projects"
-            class="btn btn-ghost">
+            class="
+              btn
+              btn-ghost
+              gap-2
+              transition-colors
+              duration-300
+              hover:text-primary
+            "
+          >
+            <span
+              class="transition-transform duration-300 hover:-translate-x-1"
+              aria-hidden="true"
+            >
+              ←
+            </span>
 
-            ← Todos los proyectos
-
+            Todos los proyectos
           </a>
 
         </div>
@@ -444,38 +894,80 @@
   <!-- ========================================= -->
 
   <main
-    class="flex min-h-screen items-center justify-center px-6">
+    class="
+      flex
+      min-h-screen
+      items-center
+      justify-center
+      bg-base-100
+      px-6
+    "
+  >
 
-    <div class="text-center">
+    <div class="max-w-md text-center">
 
       <div
-        class="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-base-200 text-2xl">
-
+        class="
+          mx-auto
+          flex
+          h-20
+          w-20
+          items-center
+          justify-center
+          rounded-3xl
+          bg-primary/10
+          text-3xl
+          font-bold
+          text-primary
+        "
+        aria-hidden="true"
+      >
         ?
-
       </div>
 
 
-      <h1 class="mt-6 text-3xl font-bold">
-
+      <h1
+        class="
+          mt-6
+          text-3xl
+          font-bold
+          tracking-tight
+        "
+      >
         Proyecto no encontrado
-
       </h1>
 
 
-      <p class="mt-3 text-base-content/60">
-
-        El proyecto que estás buscando no existe o ya no está disponible.
-
+      <p
+        class="
+          mt-3
+          leading-7
+          text-base-content/60
+        "
+      >
+        El proyecto que estás buscando no existe
+        o ya no está disponible.
       </p>
 
 
       <a
         routerLink="/projects"
-        class="btn btn-primary mt-8">
+        class="
+          btn
+          btn-primary
+          mt-8
+          gap-2
+          transition-all
+          duration-300
+          hover:-translate-y-0.5
+          hover:shadow-lg
+        "
+      >
+        <span aria-hidden="true">
+          ←
+        </span>
 
-        ← Volver a proyectos
-
+        Volver a proyectos
       </a>
 
     </div>
