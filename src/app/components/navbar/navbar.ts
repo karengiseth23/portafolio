@@ -15,18 +15,12 @@ export class Navbar {
 
   isDark = false;
 
-  constructor(private router: Router) {
+  constructor() {
     const theme = localStorage.getItem('theme') || 'karen';
 
     document.documentElement.setAttribute('data-theme', theme);
 
     this.isDark = theme === 'karen-dark';
-    
-    this.router.events.subscribe(event => {
-    if (event instanceof NavigationEnd) {
-      (document.activeElement as HTMLElement)?.blur();
-    }
-  });
   }
 
   toggleTheme(): void {
@@ -38,4 +32,5 @@ export class Navbar {
 
     localStorage.setItem('theme', theme);
   }
+
 }
