@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterLink, RouterLinkActive } from '@angular/router';
+import { Route, Router, RouterLink, RouterLinkActive, NavigationEnd } from '@angular/router';
 import { ModalContacto } from '../modal-contacto/modal-contacto';
 import { Translate } from "../translate/translate";
 
@@ -15,12 +15,18 @@ export class Navbar {
 
   isDark = false;
 
-  constructor() {
+  constructor(private router: Router) {
     const theme = localStorage.getItem('theme') || 'karen';
 
     document.documentElement.setAttribute('data-theme', theme);
 
     this.isDark = theme === 'karen-dark';
+    
+    this.router.events.subscribe(event => {
+    if (event instanceof NavigationEnd) {
+      (document.activeElement as HTMLElement)?.blur();
+    }
+  });
   }
 
   toggleTheme(): void {
