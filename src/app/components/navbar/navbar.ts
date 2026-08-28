@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Route, Router, RouterLink, RouterLinkActive, NavigationEnd } from '@angular/router';
+import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ModalContacto } from '../modal-contacto/modal-contacto';
 import { Translate } from "../translate/translate";
 
@@ -12,7 +12,7 @@ import { Translate } from "../translate/translate";
 })
 export class Navbar {
   mostrarModalContacto = false;
-
+  menuOpen = false;
   isDark = false;
 
   constructor() {
@@ -31,6 +31,14 @@ export class Navbar {
     document.documentElement.setAttribute('data-theme', theme);
 
     localStorage.setItem('theme', theme);
+  }
+
+  toggleMenu() {
+  this.menuOpen = !this.menuOpen;
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
   }
 
 }
