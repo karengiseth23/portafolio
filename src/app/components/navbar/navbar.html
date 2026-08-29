@@ -69,7 +69,7 @@
             absolute
             left-0
             top-full
-            z-[100]
+            z-[6000]
             bg-white
             menu
             z-50
@@ -295,7 +295,7 @@
               class="
                 btn
                 btn-soft
-                btn-primary
+                btn-secondary
                 m-1
                 w-[calc(100%-0.5rem)]
                 text-lg
@@ -304,7 +304,7 @@
                 hover:-translate-y-0.5
                 hover:shadow-md
               "
-              (click)="mostrarModalContacto = true"
+              (click)="mostrarModalContacto = true ; menuOpen = false"
             >
               Contáctame
             </button>
@@ -312,7 +312,6 @@
           </li>
 
         </ul>
-
       </div>
 
 
@@ -634,7 +633,11 @@
 
   </div>
 
-
+  <div 
+    *ngIf="menuOpen"
+    class="fixed  z-[5000] inset-0 bg-black/30"
+    (click)="closeMenu()">
+  </div>
   <app-modal-contacto
     [mostrar]="mostrarModalContacto"
     (cerrar)="mostrarModalContacto = false"

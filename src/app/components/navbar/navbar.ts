@@ -2,11 +2,11 @@ import { Component } from '@angular/core';
 import { RouterLink, RouterLinkActive } from '@angular/router';
 import { ModalContacto } from '../modal-contacto/modal-contacto';
 import { Translate } from "../translate/translate";
-
+import { CommonModule } from '@angular/common';  
 
 @Component({
   selector: 'app-navbar',
-  imports: [RouterLink, RouterLinkActive, ModalContacto, Translate],
+  imports: [RouterLink, RouterLinkActive, ModalContacto, Translate, CommonModule],
   templateUrl: './navbar.html',
   styleUrl: './navbar.css',
 })
