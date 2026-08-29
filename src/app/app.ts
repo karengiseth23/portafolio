@@ -3,6 +3,7 @@ import { RouterOutlet } from '@angular/router';
 import { Navbar } from './components/navbar/navbar';
 import { Footer } from './components/footer/footer';
 import { LoaderHome } from './loader-home/loader-home';
+import { BackToTop } from "./back-to-top/back-to-top";
 
 
 @Component({
@@ -11,8 +12,9 @@ import { LoaderHome } from './loader-home/loader-home';
     RouterOutlet,
     Navbar,
     Footer,
-    LoaderHome
-  ],
+    LoaderHome,
+    BackToTop
+],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })

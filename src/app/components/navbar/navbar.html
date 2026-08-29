@@ -70,7 +70,6 @@
             left-0
             top-full
             z-[6000]
-            bg-white
             menu
             z-50
             mt-3
@@ -633,11 +632,13 @@
 
   </div>
 
-  <div 
-    *ngIf="menuOpen"
-    class="fixed  z-[5000] inset-0 bg-black/30"
-    (click)="closeMenu()">
-  </div>
+  @if (menuOpen) {
+    <div 
+      class="fixed inset-0 bg-black/30 z-[5000]"
+      (click)="closeMenu()">
+    </div>
+  }
+
   <app-modal-contacto
     [mostrar]="mostrarModalContacto"
     (cerrar)="mostrarModalContacto = false"
